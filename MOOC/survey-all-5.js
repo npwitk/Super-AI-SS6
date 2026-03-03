@@ -9,13 +9,11 @@ How to use
 document
   .querySelectorAll('input[type="radio"][aria-label="5"]')
   .forEach((radio) => {
-    radio.checked = true;
+    radio.click();
   });
 
-document
-  .querySelectorAll('input[type="radio"][aria-label="5"]')
-  .forEach((radio) => {
-    radio.dispatchEvent(new Event("change", { bubbles: true }));
-  });
+document.querySelectorAll("button.submit").forEach((btn) => {
+  btn.disabled = false;
+});
 
 console.log("All 5s selected");
